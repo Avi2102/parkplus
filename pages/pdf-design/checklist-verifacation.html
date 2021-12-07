@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Location Mapping</title>
+    <link rel="shortcut icon" href="../../images/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/datepicker.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        @media print {
+            /* devanagari */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v12/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
+                unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v12/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v12/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            /* devanagari */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLGT9Z11lFc-K.woff2) format('woff2');
+                unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            /* devanagari */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLEj6Z11lFc-K.woff2) format('woff2');
+                unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            body {
+                background: none;
+                -ms-zoom: 1.665;
+            }
+            div.portrait,
+            div.landscape {
+                margin: 0;
+                padding: 0;
+                border: none;
+                background: none;
+            }
+            div.landscape {
+                transform: rotate(270deg) translate(-276mm, 0);
+                transform-origin: 0 0;
+            }
+        }        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        a {
+            color: #1b7cef;
+            /* text-decoration: underline; */
+        }
+        /* body {
+            position: relative;
+            width: 21cm;  
+            height: 29.7cm; 
+            margin: 0 auto; 
+            color: #001028;
+            background: #FFFFFF; 
+            font-family: Arial, sans-serif; 
+            font-size: 12px; 
+            font-family: Arial;
+        } */
+        header {
+            padding: 0;
+            /* margin-bottom: 5px; */
+            color: #0f1c21;
+        }
+
+        h1 {
+            color: #1b7cef;
+            font-size: 1.8em;
+            line-height: 1.4em;
+            font-weight: normal;
+            text-align: right;
+            margin: 0 0 10px 0;
+            /* background: url(dimension.png); */
+        }
+
+        #project {
+            float: left;
+        }
+
+        #project span {
+            color: #5D6975;
+            text-align: right;
+            width: 52px;
+            margin-right: 10px;
+            display: inline-block;
+            font-size: 0.8em;
+        }
+
+        #company {
+            float: right;
+            text-align: right;
+        }
+
+        #project div,
+        #company div {
+            white-space: nowrap;
+        }
+
+        table {
+            border: 1px solid #C1CED9;
+            border: none;
+            width: 100%;
+            /* border-collapse: collapse;
+            border-spacing: 0;*/
+            margin: 20px 0;
+            font-size: 12px;
+        }
+        table table {
+            margin: 0;
+        }
+        table tr:nth-child(2n-1) td {
+            background: #FFF;
+        }
+
+        .panel-table th,
+        .panel-table td {
+            text-align: center;
+            border: 1px solid #444;
+        }
+
+        table th {
+            padding: 5px 5px;
+            color: #5D6975;
+            border: 1px solid rgba(112, 112, 112, 0.8);
+            background-color: #1b7cef;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        table .service,
+        table .desc {
+            text-align: left;
+        }
+
+        table .cen {
+            text-align: center;
+        }
+
+        table td {
+            padding: 5px;
+            text-align: right;
+        }
+
+        table td.service,
+        table td.desc {
+            vertical-align: top;
+        }
+
+        table td.unit,
+        table td.qty,
+        table td.total {
+            font-size: 1.2em;
+        }
+
+        table td.grand {
+            border-top: 1px solid #5D6975;
+        }
+
+        #notices .notice {
+            color: #5D6975;
+            font-size: 1.2em;
+        }
+
+        footer {
+            color: #5D6975;
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            bottom: 0;
+            border-top: 1px solid #C1CED9;
+            padding: 8px 0;
+            text-align: center;
+        }
+
+        .panel-table tr:nth-of-type(even) td{
+            background-color: #fafcfd;
+        }
+        .panel-table tr.last-row td {
+            color: #0f1c21;
+            background: #F5F5F5;
+            font-size: 15px;
+        }
+        .panel-heading {
+            font-weight: 600;
+            color: #1b7cef;
+            font-size: 18px;
+        }
+        .title {
+            display: block;
+            padding: 5px 10px;
+            background-color: #1b7cef;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        table.table td{
+            text-align: left;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="javascript:void(0)" class="sidebar-hamburger">
+                <img src="../../images/hamburger.png" alt="">
+            </a>
+            <a href="../index.html" class="">
+                <picture>
+                    <source media="(min-width:768px)" srcset="../../images/logo.png">
+                    <img src="../../images/mini-logo.png" alt="Logo" width="99">
+                </picture>
+                <span>Fusion</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="treeview notification">
+                    <a href="#"><img src="../../images/bell.png" alt=""></a>
+                </li>
+                <li class="treeview admin-menu">
+                    <a href="#">
+                        <span class="admin-icon"><img src="../../images/admin.png" alt=""></span>
+                        <span class="admin-name">Saurabh Mitra</span>
+                        <img src="../../images/arrow-down.png" alt="" class="dropdown-icon">
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="body-container">
+        <aside class="main-sidebar scrollbar-styling">
+            <section class="sidebar">
+                <ul class="sidebar-menu tree">
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="../pwa-maintenance/preventive-maintenance.html">Preventive Maintenance</a>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Tickets</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../pwa-maintenance/pm-tickets.html">PM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/rm-tickets.html">RM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>
+                        </ul>
+                    </li>             
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Sales</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../sales/sales-create-lead.html">Create Lead</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Lead Listing</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../sales/presales-lead-listing.html">Pre Sales Lead Listing</a>
+                                    </li>
+                                    <li>
+                                        <a href="../sales/postsales-lead-listing.html">Post Sales Lead Listing</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-ticket-list.html">Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-approvals-list.html">Approvals</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Installation</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../installation/site-listing.html">Site Listing</a>
+                            </li>
+                            <li>
+                                <a href="../installation/set-target-date.html">Set Target Date</a>
+                            </li>
+                            <li>
+                                <a href="../installation/site-stages.html">Site Stages</a>
+                            </li>
+                            <li>
+                                <a href="../installation/change-assignee.html">Change Assignee</a>
+                            </li>
+                            <li>
+                                <a href="../installation/meeting-history.html">Schedule Meeting</a>
+                            </li>
+                            <li>
+                                <a href="../installation/vendor-allocation.html">Vendor Allocation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Maintenance</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../maintenance/go-live-sites.html">Go Live Sites</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Preventive Maintenance</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../maintenance/reactive-maintenance.html">Reactive Maintenance</a>
+                            </li>
+                            <li>
+                                <a href="../maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>                    
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Approvals</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/approval-pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-rm-tickets.html">RM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approvals-employee-tickets.html">Employee Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="../site-location-mapping">Site Location Mapping</a>
+                    </li>
+                    <li>
+                        <a href="../file-complain/index.html">File Complain</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <div class="content-wrapper">
+            <div class="layout-header">
+                <h4>Testing Commision Report</h4>
+            </div>
+            <div class="panel scrollbar-styling">
+                <table border="0">
+                    <tr valign="top">
+                        <td style=" text-align: left;"><img src="http://192.168.12.186/images/logo.png"></td>
+                        <td>
+                            <h1 style="font-weight: 700; line-height: 1; font-size:2.2em;">Checklist Veriffication</h1>
+                        </td>
+                    </tr>
+                </table>
+                <table class="table" border="0" cellspacing="0" cellspadding="0" style="margin-bottom: 20px; border: 1px solid rgba(112, 112, 112, 0.6); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);">
+                    <thead>
+                        <tr valign='top'>
+                            <th colspan="6" style="text-align:center;padding: 13px 20px 13px; font-size: 15px">
+                                <strong size="line-height: 2;display:block;">Site Inspection Checklist</strong>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td style="width:16.67%; border-bottom: 1px solid rgba(112, 112, 112, 0.6); padding: 8px 20px 8px; text-align:left;">Site:-</td>
+                        <td style="width:16.67%; border-bottom: 1px solid rgba(112, 112, 112, 0.6); padding: 8px 20px 8px;"></td>
+                        <td style="width:16.67%; border-bottom: 1px solid rgba(112, 112, 112, 0.6); padding: 8px 20px 8px; text-align:left;">Date:-</td>
+                        <td style="width:16.67%; border-bottom: 1px solid rgba(112, 112, 112, 0.6); padding: 8px 20px 8px;"></td>
+                        <td style="width:16.67%; border-bottom: 1px solid rgba(112, 112, 112, 0.6); padding: 8px 20px 8px; text-align:left;">Location:-</td>
+                        <td style="width:16.67%; border-bottom: 1px solid rgba(112, 112, 112, 0.6); padding: 8px 20px 8px;"></td>
+                    </tr>
+                </table>
+                <table class="table" border="0" cellspadding="0" cellspacing="0" style="border: 1px solid rgba(112, 112, 112, 0.6);">
+                    <tr>
+                        <td style="width:16.67%; padding: 8px 20px 8px; text-align:left;">Gate No. :-</td>
+                        <td style="width:16.67%; padding: 8px 20px 8px;"></td>
+                        <td style="width:16.67%; padding: 8px 20px 8px; text-align:left;">Entry :-</td>
+                        <td style="width:16.67%; padding: 8px 20px 8px;"></td>
+                        <td style="width:16.67%; padding: 8px 20px 8px; text-align:left;">Exit :-</td>
+                        <td style="width:16.67%; padding: 8px 20px 8px;"></td>
+                    </tr>
+                </table>
+                <table class="table" border="1" cellspadding="0" cellspacing="0">
+                    <tr>
+                        <th style="padding: 13px 20px; font-size: 15px;">Requirement</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">Powerpoint is availability with 16 AMP MCB</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">Power Backup is availability .if present then details of time taken for power connectivity also please check power back-up through DG or UPS</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">Internet router present if yes then brand name and Static IP details</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">Internet service provider details</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">Check internet availability at all gates</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">Any high tension line passing below the proposed location</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">Any gas line passing below or near the proposed location</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">Check is there any water tank, derange or basement</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">If the barrier proposed on ramp check the mother slab thickness</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">Iron cage below the magnetic loop</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">Check any obstacle in the barrier arm movement</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">Check the wiring & internet route also connectivity</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">Server location and wire routing ( Corporate only )</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(112, 112, 112, 0.6); padding: 12px 20px;">
+                            <span style="display: block;padding-bottom: 5px;font-size: 14px; color: rgba(0, 0, 0, 0.8)">If the wiring route is long then check the conduit and condition for the same</span>
+                            <span class="answer" style="display: block; margin-top: 5px; font-size: 14px; color: rgba(0, 0, 0, 0.7)">Yes</span>
+                        </td>
+                    </tr>
+                </table>
+                <table class="table" border="1" cellspadding="0" cellspacing="0">        
+                    <tr>
+                        <th style="padding-top:15px;padding-bottom:15px;" width="15">S.No.</th>
+                        <th style="padding-top:15px;padding-bottom:15px;">Requirement</th>
+                        <th style="padding-top:15px;padding-bottom:15px;" width="100">Test 1</th>
+                        <th style="padding-top:15px;padding-bottom:15px;" width="100">Test 2</th>
+                        <th style="padding-top:15px;padding-bottom:15px;" width="100">Test 3</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Powerpoint is availability with 16 AMP MCB</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Power Backup is availability .if present then details of time taken for power connectivity also please check power back-up through DG or UPS</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Internet router present if yes then brand name and Static IP details</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Internet service provider details</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Check internet availability at all gates</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Any high tension line passing below the proposed location</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Any gas line passing below or near the proposed location</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Check is there any water tank, derange or basement</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>If the barrier proposed on ramp check the mother slab thickness</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Iron cage below the magnetic loop</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Check any obstacle in the barrier arm movement</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Check the wiring & internet route also connectivity</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Server location and wire routing ( Corporate only )</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>If the wiring route is long then check the conduit and condition for the same</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <table class="table" border="1" cellspadding="0" cellspacing="0">
+                    <tr>
+                        <th style="padding: 15px; margin-bototm: 20px">Terms</th>
+                    </tr>
+                    <tr>
+                        <td>1) Civil work will be started after the approval of the site layout and clear work front.</td>
+                    </tr>
+                    <tr>
+                        <td>2) Proposed locations to install RFID reader :<br>
+                            &nbsp; &nbsp; a) On Pole &nbsp; &nbsp; b) On any different place (pictures to be taken).</td>
+                    </tr>
+                    <tr>
+                        <td>3) If any amendment in materials requirement is made then necessary approval from the sales team will be taken, based on communication with the client.</td>
+                    </tr>
+                    <tr>
+                        <td>4) If there is any type of water blockage at the barrier location, or any other obstacle like ( iron rail, pipe line) is present, all these may impact the functioning of the barrier . So all these issues ( related to civil work) will be rectified by the client side only &amp; civil work will be on the client's cost.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Note:</strong> Any changes made after site approval is completed, extra charges will be applicable as per the alteration made (T&C applicable).</td>
+                    </tr>
+                </table>
+                <br>
+                <table class="table" border="0">
+                    <tr>
+                        <td style="text-align: center">
+                            <span style="font-size: 18px;font-weight:600;text-align: center;">Option 1 (Left Barrier & Right Reader's)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://s3.ap-south-1.amazonaws.com/park-fusion-dev/base_64_test_file/1603170057.jpeg" style="width: 100%;height: auto;" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center">
+                            <span style="font-size: 18px;font-weight:600;text-align: center;">Option 2 (Right Barrier & Left Reader's)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://s3.ap-south-1.amazonaws.com/park-fusion-dev/base_64_test_file/1603170057.jpeg" style="width: 100%;height: auto;" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center">
+                            <span style="font-size: 18px;font-weight:600;text-align: center;">Option 3 (Barrier & Reader's on Right Side)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://s3.ap-south-1.amazonaws.com/park-fusion-dev/base_64_test_file/1603170057.jpeg" style="width: 100%;height: auto;" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center">
+                            <span style="font-size: 18px;font-weight:600;text-align: center;">Option 4 (Barrier & Reader's on Left Side)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://s3.ap-south-1.amazonaws.com/park-fusion-dev/base_64_test_file/1603170057.jpeg" style="width: 100%;height: auto;" alt="">
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td style="text-align: left; width: 33.33%;">Customer Signature</td>
+                        <td style="text-align: left; width: 33.33%;"></td>
+                        <td style="text-align: left; width: 33.33%;">Installation head / Site Engineer</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; width: 33.33%; border: 1px solid;" height="60"></td>
+                        <td style="text-align: left; width: 33.33%;"></td>
+                        <td style="text-align: left; width: 33.33%; border: 1px solid;" height="60"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; width: 33.33%;">Nane</td>
+                        <td style="text-align: left; width: 33.33%;"></td>
+                        <td style="text-align: left; width: 33.33%;">Name</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; width: 33.33%;">Designation</td>
+                        <td style="text-align: left; width: 33.33%;"></td>
+                        <td style="text-align: left; width: 33.33%;">Designation</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; width: 33.33%;">Mobile Number</td>
+                        <td style="text-align: left; width: 33.33%;"></td>
+                        <td style="text-align: left; width: 33.33%;">Mobile Number</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/moment.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

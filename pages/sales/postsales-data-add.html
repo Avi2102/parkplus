@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales - Presales - Supply</title>
+    <link rel="shortcut icon" href="../../images/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>    
+    <header class="main-header">
+        <div class="logo">
+            <a href="javascript:void(0)" class="sidebar-hamburger">
+                <img src="../../images/hamburger.png" alt="">
+            </a>
+            <a href="../index.html" class="">
+                <picture>
+                    <source media="(min-width:768px)" srcset="../../images/logo.png">
+                    <img src="../../images/mini-logo.png" alt="Logo" width="99">
+                </picture>
+                <span>Fusion</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="treeview notification">
+                    <a href="#"><img src="../../images/bell.png" alt=""></a>
+                </li>
+                <li class="treeview admin-menu">
+                    <a href="#">
+                        <span class="admin-icon"><img src="../../images/admin.png" alt=""></span>
+                        <span class="admin-name">Saurabh Mitra</span>
+                        <img src="../../images/arrow-down.png" alt="" class="dropdown-icon">
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="body-container">
+        <aside class="main-sidebar scrollbar-styling">
+            <section class="sidebar">
+                <ul class="sidebar-menu tree">
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="../pwa-maintenance/preventive-maintenance.html">Preventive Maintenance</a>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Tickets</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../pwa-maintenance/pm-tickets.html">PM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/rm-tickets.html">RM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>
+                        </ul>
+                    </li>             
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Sales</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../sales/sales-create-lead.html">Create Lead</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Lead Listing</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../sales/presales-lead-listing.html">Pre Sales Lead Listing</a>
+                                    </li>
+                                    <li>
+                                        <a href="../sales/postsales-lead-listing.html">Post Sales Lead Listing</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-ticket-list.html">Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-approvals-list.html">Approvals</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Installation</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../installation/site-listing.html">Site Listing</a>
+                            </li>
+                            <li>
+                                <a href="../installation/set-target-date.html">Set Target Date</a>
+                            </li>
+                            <li>
+                                <a href="../installation/site-stages.html">Site Stages</a>
+                            </li>
+                            <li>
+                                <a href="../installation/change-assignee.html">Change Assignee</a>
+                            </li>
+                            <li>
+                                <a href="../installation/meeting-history.html">Schedule Meeting</a>
+                            </li>
+                            <li>
+                                <a href="../installation/vendor-allocation.html">Vendor Allocation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Maintenance</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../maintenance/go-live-sites.html">Go Live Sites</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Preventive Maintenance</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../maintenance/reactive-maintenance.html">Reactive Maintenance</a>
+                            </li>
+                            <li>
+                                <a href="../maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>                    
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Approvals</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/approval-pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-rm-tickets.html">RM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approvals-employee-tickets.html">Employee Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="../site-location-mapping">Site Location Mapping</a>
+                    </li>
+                    <li>
+                        <a href="../file-complain/index.html">File Complain</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <div class="content-wrapper">
+            <div class="layout-header">
+                <h4><a href="../sales/postsales-lead-listing.html"><img src="../../images/back-arrow.png" alt=""> Add Post Sales Data</a></h4>
+                <div class="btn-group">
+                    <a href="../sales/postsales-data.html" class="btn btn-transparent">Save Changes</a>
+                    <a href="../sales/postsales-lead-listing.html" class="btn btn-primary d-none d-md-inline-block">Submit Details <img src="../../images/arrow-right.png" alt=""></a>
+                </div>
+            </div>
+            <div class="panel scrollbar-styling">
+                <div class="panel-card">
+                    <div class="panel-heading">Commercial Type</div>
+                    <div class="panel-body">
+                        <form action="">
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required multiple>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="mall" selected>Opex Rental</option>
+                                    <option value="corporate">Corporate</option>
+                                    <option value="stargazer">stargazer</option>
+                                    <option value="interplot">interplot</option>
+                                    <option value="car">car</option>
+                                    <option value="reshape2">reshape2</option>
+                                    <option value="broom">broom</option>
+                                </select>
+                                <label class="placeholder">Commercial Type</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Commercial Description</div>
+                    <div class="panel-body">
+                        <form action="">
+                            <div class="form-group">
+                                <input type="text" class="form-control" required>
+                                <label for="" class="placeholder">Installation Amount (Excluding Taxes)</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" required>
+                                <label for="" class="placeholder">Total Amount (Excluding Taxes)</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required multiple>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="mall">Mall</option>
+                                    <option value="corporate">Corporate</option>
+                                    <option value="stargazer">stargazer</option>
+                                    <option value="interplot">interplot</option>
+                                    <option value="car">car</option>
+                                    <option value="reshape2">reshape2</option>
+                                    <option value="broom">broom</option>
+                                </select>
+                                <label class="placeholder">Payment Terms</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" required>
+                                <label for="" class="placeholder">Subscription Amount (Excluding Taxes)</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" required>
+                                <label for="" class="placeholder">Payment Terms Description</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required multiple>
+                                    <option value="y" selected>Yes</option>
+                                    <option value="n">No</option>
+                                </select>
+                                <label class="placeholder">Payment Modes</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required multiple>
+                                    <option value="y" selected>Yes</option>
+                                    <option value="n">No</option>
+                                </select>
+                                <label class="placeholder">Total Contract Length</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required multiple>
+                                    <option value="y" selected>Yes</option>
+                                    <option value="n">No</option>
+                                </select>
+                                <label class="placeholder">Contract Lock-in Period</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="" id="" placeholder="" class="form-control" required>
+                                <label class="placeholder">Yearly Inclination</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="" id="" placeholder="" class="form-control" required>
+                                <label class="placeholder">Security Deposit (Excluding Taxes)</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="" id="" placeholder="" class="form-control" required>
+                                <label class="placeholder">No. of Slots - Car (4-Wheeler)</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="" id="" placeholder="" class="form-control" required>
+                                <label class="placeholder">No. of Slots - Bike (2-Wheeler)</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="" id="" placeholder="" value="10" class="form-control" required>
+                                <label class="placeholder">No. of Tags</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required multiple>
+                                    <option value="y">Yes</option>
+                                    <option value="n">No</option>
+                                </select>
+                                <label class="placeholder">Supply Name</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required multiple>
+                                    <option value="y">Yes</option>
+                                    <option value="n">No</option>
+                                    <option value="b" selected>Both</option>
+                                </select>
+                                <label class="placeholder">Which details do you want to provide?</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Agreement Contract Details</div>
+                    <div class="panel-body">
+                        <form action="">
+                            <div class="form-group date" data-date-format="mm-dd-yyyy">
+                                <input class="form-control" type="text" placeholder="" required/>
+                                <span class="input-group-addon"></span>                                    
+                                <label class="placeholder">Agreement/Contract Signing Date</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group date" data-date-format="mm-dd-yyyy">
+                                <input class="form-control" type="text" placeholder="" required/>
+                                <span class="input-group-addon"></span>                                    
+                                <label class="placeholder">Agreement/Contract Period</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required multiple>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="mall">Mall</option>
+                                    <option value="corporate">Corporate</option>
+                                    <option value="stargazer">stargazer</option>
+                                    <option value="interplot">interplot</option>
+                                    <option value="car">car</option>
+                                    <option value="reshape2">reshape2</option>
+                                    <option value="broom">broom</option>
+                                </select>
+                                <label class="placeholder">Agreement/Contract Length</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="custom-upload">
+                                    <input type="file" name="" id="" class="custom-input-file">
+                                    <button class="btn btn-transparent">Agreement/Contract Upload</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Purchase Order (P.O)</div>
+                    <div class="panel-body">
+                        <form action="">
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="" required/>
+                                <label class="placeholder">P.O. Number</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group date" data-date-format="mm-dd-yyyy">
+                                <input class="form-control" type="text" placeholder="" required/>
+                                <span class="input-group-addon"></span>                                    
+                                <label class="placeholder">P.O. Date</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="custom-upload">
+                                    <input type="file" name="" id="" class="custom-input-file">
+                                    <button class="btn btn-transparent">P.O. Upload</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">GST Details</div>
+                    <div class="panel-body">
+                        <form action="">
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required multiple>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="y" selected>Yes</option>
+                                    <option value="n">No</option>
+                                    <option value="b">Both</option>
+                                </select>
+                                <label class="placeholder">GST Registered</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" value="9481939912" placeholder="" required/>
+                                <label class="placeholder">GST Number</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="custom-upload">
+                                    <input type="file" name="" id="" class="custom-input-file">
+                                    <button class="btn btn-transparent">Upload Document</button>
+                                    <label for="" class="label info-label">
+                                        <img src="../../images/info.png" alt="">
+                                        Please upload your GST Document 
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Partner Contact & Escalation Matrix</div>
+                    <div class="panel-body">
+                        <div class="accordion-wrapper">
+                            <div class="accordion active">
+                                <div class="accordion-title">POC 1</div>
+                                <div class="accordion-container" style="display: block;">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">POC Name</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">POC Email Address</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">POC Mobile Number</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">POC Designation</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="accordion-title">POC 2</div>
+                                <div class="accordion-container">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">POC Name</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">POC Email Address</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">POC Mobile Number</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">POC Designation</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="accordion-title">POC 3</div>
+                                <div class="accordion-container">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">POC Name</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">POC Email Address</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">POC Mobile Number</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">POC Designation</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Parking Rules</div>
+                    <div class="panel-body">
+                        <form action="">
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="tidyverse">tidyverse</option>
+                                    <option value="psych">psych</option>
+                                    <option value="stargazer">stargazer</option>
+                                    <option value="interplot">interplot</option>
+                                    <option value="car">car</option>
+                                    <option value="reshape2">reshape2</option>
+                                    <option value="broom">broom</option>
+                                </select>
+                                <label class="placeholder">Overnight parking allowed</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="tidyverse">tidyverse</option>
+                                    <option value="psych">psych</option>
+                                    <option value="stargazer">stargazer</option>
+                                    <option value="interplot">interplot</option>
+                                    <option value="car">car</option>
+                                    <option value="reshape2">reshape2</option>
+                                    <option value="broom">broom</option>
+                                </select>
+                                <label class="placeholder">Two wheelers allowed to park with cars</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group date" data-date-format="mm-dd-yyyy">
+                                <input class="form-control" type="text" placeholder="" required/>
+                                <span class="input-group-addon"></span>                                    
+                                <label class="placeholder">Timings</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="" id="" placeholder="" class="form-control" required>
+                                <label class="placeholder">Any other rule</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="" id="" placeholder="" class="form-control" required>
+                                <label class="placeholder">Marketing/Signage requirement</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group date" data-date-format="mm-dd-yyyy">
+                                <input class="form-control" type="text" placeholder="" required/>
+                                <span class="input-group-addon"></span>                                    
+                                <label class="placeholder">Expected Live Date</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Material/Hardware</div>
+                    <div class="panel-body">
+                        <form action="">
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="y">Yes</option>
+                                    <option value="n">No</option>
+                                    <option value="b">Both</option>
+                                </select>
+                                <label class="placeholder">Material/Hardware Required</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <fieldset>
+                                <div class="full-width">
+                                    <label class="label">Gate no. 2 <a href="javascript:void(0)" class="field-remove">Remove</a></label>
+                                </div>
+                                <div class="form-group">
+                                    <select name="" id="" class="form-control custom-select" required>
+                                        <option value="" hidden>Please Select</option>
+                                        <option value="tidyverse">tidyverse</option>
+                                        <option value="psych">psych</option>
+                                        <option value="stargazer">stargazer</option>
+                                        <option value="interplot">interplot</option>
+                                        <option value="car">car</option>
+                                        <option value="reshape2">reshape2</option>
+                                        <option value="broom">broom</option>
+                                    </select>
+                                    <label class="placeholder">Hardware Type</label>
+                                    <label class="error">Error Message show with error-field class on input</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="" id="" placeholder="" class="form-control" required>
+                                    <label class="placeholder">Quantity</label>
+                                    <label class="error">Error Message show with error-field class on input</label>
+                                </div>
+                                <div class="form-group full-width">
+                                    <a href="javascript:void(0)" class="btn btn-transparent">Add Another Item</a>
+                                </div>
+                            </fieldset>
+                            <div class="form-group">
+                                <div class="custom-upload">
+                                    <input type="file" name="" id="" class="custom-input-file">
+                                    <a href="javascript:void(0)" class="btn btn-transparent">Upload Site Photos</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-upload">
+                                    <input type="file" name="" id="" class="custom-input-file">
+                                    <a href="javascript:void(0)" class="btn btn-transparent">Upload Site Videos</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Gate Details</div>
+                    <div class="panel-body">
+                        <div class="accordion-wrapper">
+                            <div class="accordion active">
+                                <div class="accordion-title">Gate 1 Details</div>
+                                <div class="accordion-container" style="display: block;">
+                                    <form action="">
+                                        <div class="form-group full-width">
+                                            <select name="" id="" class="form-control custom-select" required>
+                                                <option value="" hidden>Please Select</option>
+                                                <option value="tidyverse">tidyverse</option>
+                                                <option value="psych">psych</option>
+                                                <option value="stargazer">stargazer</option>
+                                                <option value="interplot">interplot</option>
+                                                <option value="car">car</option>
+                                                <option value="reshape2">reshape2</option>
+                                                <option value="broom">broom</option>
+                                            </select>
+                                            <label class="placeholder">Used For</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="" id="" class="form-control custom-select" required>
+                                                <option value="" hidden>Please Select</option>
+                                                <option value="y">Yes</option>
+                                                <option value="n">No</option>
+                                            </select>
+                                            <label class="placeholder">Any Hardware which needs to be removed ?</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">Hardware Details</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-upload">
+                                                <input type="file" name="" id="" class="custom-input-file">
+                                                <a href="javascript:void(0)" class="btn btn-transparent">Upload Site Photos</a>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-upload">
+                                                <input type="file" name="" id="" class="custom-input-file">
+                                                <a href="javascript:void(0)" class="btn btn-transparent">Upload Site Videos</a>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="full-width">
+                                            <label for="" class="label">Internet Details</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="" id="" class="form-control custom-select" required>
+                                                <option value="" hidden>Please Select</option>
+                                                <option value="y">Yes</option>
+                                                <option value="n">No</option>
+                                            </select>
+                                            <label class="placeholder">Internet Availability</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">Timeline for Internet Connection </label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="accordion-title">Gate 2 Details</div>
+                                <div class="accordion-container">
+                                    <form action="">
+                                        <div class="form-group full-width">
+                                            <select name="" id="" class="form-control custom-select" required>
+                                                <option value="" hidden>Please Select</option>
+                                                <option value="tidyverse">tidyverse</option>
+                                                <option value="psych">psych</option>
+                                                <option value="stargazer">stargazer</option>
+                                                <option value="interplot">interplot</option>
+                                                <option value="car">car</option>
+                                                <option value="reshape2">reshape2</option>
+                                                <option value="broom">broom</option>
+                                            </select>
+                                            <label class="placeholder">Used For</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="" id="" class="form-control custom-select" required>
+                                                <option value="" hidden>Please Select</option>
+                                                <option value="y">Yes</option>
+                                                <option value="n">No</option>
+                                            </select>
+                                            <label class="placeholder">Any Hardware which needs to be removed ?</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">Hardware Details</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-upload">
+                                                <input type="file" name="" id="" class="custom-input-file">
+                                                <a href="javascript:void(0)" class="btn btn-transparent">Upload Site Photos</a>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-upload">
+                                                <input type="file" name="" id="" class="custom-input-file">
+                                                <a href="javascript:void(0)" class="btn btn-transparent">Upload Site Videos</a>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group full-width">
+                                            <label for="" class="label">Internet Details</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="" id="" class="form-control custom-select" required>
+                                                <option value="" hidden>Please Select</option>
+                                                <option value="y">Yes</option>
+                                                <option value="n">No</option>
+                                            </select>
+                                            <label class="placeholder">Internet Availability</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">Timeline for Internet Connection </label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="accordion-title">Gate 3 Details</div>
+                                <div class="accordion-container">
+                                    <form action="">
+                                        <div class="form-group full-width">
+                                            <select name="" id="" class="form-control custom-select" required>
+                                                <option value="" hidden>Please Select</option>
+                                                <option value="tidyverse">tidyverse</option>
+                                                <option value="psych">psych</option>
+                                                <option value="stargazer">stargazer</option>
+                                                <option value="interplot">interplot</option>
+                                                <option value="car">car</option>
+                                                <option value="reshape2">reshape2</option>
+                                                <option value="broom">broom</option>
+                                            </select>
+                                            <label class="placeholder">Used For</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="" id="" class="form-control custom-select" required>
+                                                <option value="" hidden>Please Select</option>
+                                                <option value="y">Yes</option>
+                                                <option value="n">No</option>
+                                            </select>
+                                            <label class="placeholder">Any Hardware which needs to be removed ?</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">Hardware Details</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-upload">
+                                                <input type="file" name="" id="" class="custom-input-file">
+                                                <a href="javascript:void(0)" class="btn btn-transparent">Upload Site Photos</a>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-upload">
+                                                <input type="file" name="" id="" class="custom-input-file">
+                                                <a href="javascript:void(0)" class="btn btn-transparent">Upload Site Videos</a>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group full-width">
+                                            <label for="" class="label">Internet Details</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="" id="" class="form-control custom-select" required>
+                                                <option value="" hidden>Please Select</option>
+                                                <option value="y">Yes</option>
+                                                <option value="n">No</option>
+                                            </select>
+                                            <label class="placeholder">Internet Availability</label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label class="placeholder">Timeline for Internet Connection </label>
+                                            <label class="error">Error Message show with error-field class on input</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Working Timing Norms</div>
+                    <div class="panel-body">
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Billed To</div>
+                    <div class="panel-body">
+                        <form action="">
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="Progressive">Progressive</option>
+                                    <option value="tidyverse">tidyverse</option>
+                                    <option value="psych">psych</option>
+                                    <option value="stargazer">stargazer</option>
+                                    <option value="interplot">interplot</option>
+                                    <option value="car">car</option>
+                                    <option value="reshape2">reshape2</option>
+                                    <option value="broom">broom</option>
+                                </select>
+                                <label class="placeholder">State</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="Progressive">Progressive</option>
+                                    <option value="tidyverse">tidyverse</option>
+                                    <option value="psych">psych</option>
+                                    <option value="stargazer">stargazer</option>
+                                    <option value="interplot">interplot</option>
+                                    <option value="car">car</option>
+                                    <option value="reshape2">reshape2</option>
+                                    <option value="broom">broom</option>
+                                </select>
+                                <label class="placeholder">City</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" required>
+                                <label class="placeholder">Address Line 1</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" required>
+                                <label class="placeholder">Address Line 2</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" required>
+                                <label class="placeholder">Pincode</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Shipped To</div>
+                    <div class="panel-body">
+                        <form action="">
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="Progressive">Progressive</option>
+                                    <option value="tidyverse">tidyverse</option>
+                                    <option value="psych">psych</option>
+                                    <option value="stargazer">stargazer</option>
+                                    <option value="interplot">interplot</option>
+                                    <option value="car">car</option>
+                                    <option value="reshape2">reshape2</option>
+                                    <option value="broom">broom</option>
+                                </select>
+                                <label class="placeholder">State</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="Progressive">Progressive</option>
+                                    <option value="tidyverse">tidyverse</option>
+                                    <option value="psych">psych</option>
+                                    <option value="stargazer">stargazer</option>
+                                    <option value="interplot">interplot</option>
+                                    <option value="car">car</option>
+                                    <option value="reshape2">reshape2</option>
+                                    <option value="broom">broom</option>
+                                </select>
+                                <label class="placeholder">City</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" required>
+                                <label class="placeholder">Address Line 1</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" required>
+                                <label class="placeholder">Address Line 2</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" required>
+                                <label class="placeholder">Pincode</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Other Details</div>
+                    <div class="panel-body">
+                        <form action="">
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="Progressive">Progressive</option>
+                                    <option value="tidyverse">tidyverse</option>
+                                    <option value="psych">psych</option>
+                                    <option value="stargazer">stargazer</option>
+                                    <option value="interplot">interplot</option>
+                                    <option value="car">car</option>
+                                    <option value="reshape2">reshape2</option>
+                                    <option value="broom">broom</option>
+                                </select>
+                                <label class="placeholder">Port Forwarding</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="full-width form-group">
+                                <a href="#" class="btn btn-transparent">Locate using GPS</a>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="94732.5819" required>
+                                <label class="placeholder">Latitude</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="5731.5881" required>
+                                <label class="placeholder">Longitude</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" required>
+                                <label class="placeholder">Remarks</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="Progressive">Progressive</option>
+                                    <option value="tidyverse">tidyverse</option>
+                                    <option value="psych">psych</option>
+                                    <option value="stargazer">stargazer</option>
+                                    <option value="interplot">interplot</option>
+                                    <option value="car">car</option>
+                                    <option value="reshape2">reshape2</option>
+                                    <option value="broom">broom</option>
+                                </select>
+                                <label class="placeholder">Scope of civil work</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="Progressive">Progressive</option>
+                                    <option value="tidyverse">tidyverse</option>
+                                    <option value="psych">psych</option>
+                                    <option value="stargazer">stargazer</option>
+                                    <option value="interplot">interplot</option>
+                                    <option value="car">car</option>
+                                    <option value="reshape2">reshape2</option>
+                                    <option value="broom">broom</option>
+                                </select>
+                                <label class="placeholder">If Corporate is SEZ</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" required>
+                                <label class="placeholder">P.O / W.O / Contract Number</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-upload">
+                                    <input type="file" name="" id="" class="custom-input-file">
+                                    <a href="javascript:void(0)" class="btn btn-transparent">P.O / W.O / Contract Upload</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-group">
+                <a href="../sales/postsales-lead-listing.html" class="btn btn-primary d-md-none">Submit Details <img src="../../images/arrow-right.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

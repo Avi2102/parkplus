@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Location Mapping</title>
+    <link rel="shortcut icon" href="../../images/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/datepicker.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        @media print {
+            /* devanagari */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v12/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
+                unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v12/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v12/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            /* devanagari */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLGT9Z11lFc-K.woff2) format('woff2');
+                unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            /* devanagari */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLEj6Z11lFc-K.woff2) format('woff2');
+                unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            body {
+                background: none;
+                -ms-zoom: 1.665;
+            }
+            div.portrait,
+            div.landscape {
+                margin: 0;
+                padding: 0;
+                border: none;
+                background: none;
+            }
+            div.landscape {
+                transform: rotate(270deg) translate(-276mm, 0);
+                transform-origin: 0 0;
+            }
+        }        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        a {
+            color: #1b7cef;
+            /* text-decoration: underline; */
+        }
+        /* body {
+            position: relative;
+            width: 21cm;  
+            height: 29.7cm; 
+            margin: 0 auto; 
+            color: #001028;
+            background: #FFFFFF; 
+            font-family: Arial, sans-serif; 
+            font-size: 12px; 
+            font-family: Arial;
+        } */
+        header {
+            padding: 0;
+            /* margin-bottom: 5px; */
+            color: #0f1c21;
+        }
+
+        h1 {
+            color: #1b7cef;
+            font-size: 1.8em;
+            line-height: 1.4em;
+            font-weight: normal;
+            text-align: right;
+            margin: 0 0 10px 0;
+            /* background: url(dimension.png); */
+        }
+
+        #project {
+            float: left;
+        }
+
+        #project span {
+            color: #5D6975;
+            text-align: right;
+            width: 52px;
+            margin-right: 10px;
+            display: inline-block;
+            font-size: 0.8em;
+        }
+
+        #company {
+            float: right;
+            text-align: right;
+        }
+
+        #project div,
+        #company div {
+            white-space: nowrap;
+        }
+
+        table {
+            border: 1px solid #C1CED9;
+            border: none;
+            width: 100%;
+            /* border-collapse: collapse;
+            border-spacing: 0;*/
+            margin: 20px 0;
+            font-size: 12px;
+        }
+        table table {
+            margin: 0;
+        }
+        table tr:nth-child(2n-1) td {
+            background: #FFF;
+        }
+
+        .panel-table th,
+        .panel-table td {
+            text-align: center;
+            border: 1px solid #444;
+        }
+
+        table th {
+            padding: 5px 5px;
+            color: #5D6975;
+            border: 1px solid rgba(112, 112, 112, 0.8);
+            background-color: #1b7cef;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        table .service,
+        table .desc {
+            text-align: left;
+        }
+
+        table .cen {
+            text-align: center;
+        }
+
+        table td {
+            padding: 5px;
+            text-align: right;
+        }
+
+        table td.service,
+        table td.desc {
+            vertical-align: top;
+        }
+
+        table td.unit,
+        table td.qty,
+        table td.total {
+            font-size: 1.2em;
+        }
+
+        table td.grand {
+            border-top: 1px solid #5D6975;
+        }
+
+        #notices .notice {
+            color: #5D6975;
+            font-size: 1.2em;
+        }
+
+        footer {
+            color: #5D6975;
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            bottom: 0;
+            border-top: 1px solid #C1CED9;
+            padding: 8px 0;
+            text-align: center;
+        }
+
+        .panel-table tr:nth-of-type(even) td{
+            background-color: #fafcfd;
+        }
+        .panel-table tr.last-row td {
+            color: #0f1c21;
+            background: #F5F5F5;
+            font-size: 15px;
+        }
+        .panel-heading {
+            font-weight: 600;
+            color: #1b7cef;
+            font-size: 18px;
+        }
+        .title {
+            display: block;
+            padding: 5px 10px;
+            background-color: #1b7cef;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        table.table td{
+            text-align: left;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="javascript:void(0)" class="sidebar-hamburger">
+                <img src="../../images/hamburger.png" alt="">
+            </a>
+            <a href="../index.html" class="">
+                <picture>
+                    <source media="(min-width:768px)" srcset="../../images/logo.png">
+                    <img src="../../images/mini-logo.png" alt="Logo" width="99">
+                </picture>
+                <span>Fusion</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="treeview notification">
+                    <a href="#"><img src="../../images/bell.png" alt=""></a>
+                </li>
+                <li class="treeview admin-menu">
+                    <a href="#">
+                        <span class="admin-icon"><img src="../../images/admin.png" alt=""></span>
+                        <span class="admin-name">Saurabh Mitra</span>
+                        <img src="../../images/arrow-down.png" alt="" class="dropdown-icon">
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="body-container">
+        <aside class="main-sidebar scrollbar-styling">
+            <section class="sidebar">
+                <ul class="sidebar-menu tree">
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="../pwa-maintenance/preventive-maintenance.html">Preventive Maintenance</a>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Tickets</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../pwa-maintenance/pm-tickets.html">PM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/rm-tickets.html">RM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>
+                        </ul>
+                    </li>             
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Sales</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../sales/sales-create-lead.html">Create Lead</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Lead Listing</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../sales/presales-lead-listing.html">Pre Sales Lead Listing</a>
+                                    </li>
+                                    <li>
+                                        <a href="../sales/postsales-lead-listing.html">Post Sales Lead Listing</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-ticket-list.html">Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-approvals-list.html">Approvals</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Installation</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../installation/site-listing.html">Site Listing</a>
+                            </li>
+                            <li>
+                                <a href="../installation/set-target-date.html">Set Target Date</a>
+                            </li>
+                            <li>
+                                <a href="../installation/site-stages.html">Site Stages</a>
+                            </li>
+                            <li>
+                                <a href="../installation/change-assignee.html">Change Assignee</a>
+                            </li>
+                            <li>
+                                <a href="../installation/meeting-history.html">Schedule Meeting</a>
+                            </li>
+                            <li>
+                                <a href="../installation/vendor-allocation.html">Vendor Allocation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Maintenance</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../maintenance/go-live-sites.html">Go Live Sites</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Preventive Maintenance</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../maintenance/reactive-maintenance.html">Reactive Maintenance</a>
+                            </li>
+                            <li>
+                                <a href="../maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>                    
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Approvals</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/approval-pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-rm-tickets.html">RM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approvals-employee-tickets.html">Employee Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="../site-location-mapping">Site Location Mapping</a>
+                    </li>
+                    <li>
+                        <a href="../file-complain/index.html">File Complain</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <div class="content-wrapper">
+            <div class="layout-header">
+                <h4>Testing Commision Report</h4>
+            </div>
+            <div class="panel scrollbar-styling">
+                <header class="clearfix">
+                    <table border="0">
+                        <tr valign="top">
+                            <td style=" text-align: left;"><img src="http://192.168.12.186/images/logo.png"></td>
+                            <td>
+                                <h1 style="font-weight: 700; line-height: 1; font-size:2.2em;">Checklist Veriffication</h1>
+                            </td>
+                        </tr>
+                    </table>
+                </header>
+                <div class="main" style="padding-bottom: 80px; position: relative">
+                    <table class="table" border="0" cellspadding="0" cellspacing="0" style="line-height:2; color: #1b7cef; font-size:20px;">
+                        <tr>
+                            <td style="text-align: center">TESTING & COMMISSIONING REPORT</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">OF</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">RFID BASED SMART PARKING MANAGEMENT AND ACCESS CONTROL SYSTEM</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">At</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">.........................................................</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">SUBMITTED BY</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">(PARKWHEELS)</td>
+                        </tr>
+                    </table>
+                    <footer>
+                        Parviom Technologies Pvt. Ltd. D-8, 3rd Floor, Mansarover Garden, <br>Delhi, New Delhi - 110015
+                    </footer>
+                </div>
+                <table class="table" border="1" cellspadding="0" cellspacing="0">
+                    <tr valign='top'>
+                        <td colspan="4" rowspan="4" style="border: 0 none;"></td>
+                        <td colspan="2" style="text-align:center">
+                            <strong size="font-size: 18px;">Site Inspection Checklist</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">Site:-</td>
+                        <td style="text-align:left;">Date:-</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;" rowspan="2">Location:-</td>
+                        <td style="text-align:left;">Gate No. :-</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">Entry/Exit:-</td>
+                    </tr>
+                    <tr>
+                        <th style="border-bottom-color:#fff;border-right-color: #fff;" width="15">S.No.</th>
+                        <th style="border-bottom-color:#fff;border-right-color: #fff;border-left-color: #fff;">Description</th>
+                        <th style="border-bottom-color:#fff;border-right-color: #fff;border-left-color: #fff;" width="15">Qty. (Nos)</th>
+                        <th style="border-bottom-color:#fff;border-right-color: #fff;border-left-color: #fff;" width="15">Make</th>
+                        <th style="border-bottom-color:#fff;border-right-color: #fff;border-left-color: #fff;" width="100">Installed/Delivered (Y/N)</th>
+                        <th style="border-bottom-color:#fff;border-left-color: #fff;" width="100">Equipment Meets Functional Test (Y/N)</th>
+                    </tr>
+                    <tr>
+                        <th colspan="6" style="border-top-color: #fff;font-size: 18px;font-weight:700;">HARDWARE DETAILS</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>UHF RFID Reader-Long Range</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Access Control Box </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Pole for RFID Reader</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Controller for automation<br>(RFID and Boom) </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Handheld Device for Guard with APP </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Boom Barrier </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Loop Detector of Boom Barrier for Safety Mechanism</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>UPS</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Push Button </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Remote </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Barrier Key </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th colspan="6" style="border-top-color: #fff;font-size: 18px;font-weight:700;">Civil & Electrical</th>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>CAT-6, Ethernet LAN Cable-D-Link (in meters) in MS Conduit.</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Installation & Wiring & civil  work for RFID Reader/LED Board and all the wiring associated</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Installation and Wiring of Boom Barrier</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Boom Barrier Foundation </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Pole Foundation</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Magnetic loop </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <br>
+                <!-- <table class="table" border="1" cellspadding="0" cellspacing="0">
+                    <tr>
+                        <th style="padding: 15px; margin-bottom: 20px">Terms</th>
+                    </tr>
+                    <tr>
+                        <td>1) Civil work will be started after the approval of the site layout and clear work front.</td>
+                    </tr>
+                    <tr>
+                        <td>2) Proposed locations to install RFID reader :<br>
+                            &nbsp; &nbsp; a) On Pole &nbsp; &nbsp; b) On any different place (pictures to be taken).</td>
+                    </tr>
+                    <tr>
+                        <td>3) If any amendment in materials requirement is made then necessary approval from the sales team will be taken, based on communication with the client.</td>
+                    </tr>
+                    <tr>
+                        <td>4) If there is any type of water blockage at the barrier location, or any other obstacle like ( iron rail, pipe line) is present, all these may impact the functioning of the barrier . So all these issues ( related to civil work) will be rectified by the client side only &amp; civil work will be on the client's cost.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Note:</strong> Any changes made after site approval is completed, extra charges will be applicable as per the alteration made (T&C applicable).</td>
+                    </tr>
+                </table> -->
+                <table border='1' cellspacing="0" cellspadding="0">
+                    <tr valign="top">
+                        <td>
+                            <table>
+                                <tr valign="top">
+                                    <td style="text-align:left;" height="80">TESTED / CHECKED BY:</td>
+                                </tr>
+                                <tr valign="top">
+                                    <td style="text-align:left;" height="40">Designation:</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">DATE:</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="text-align:left;">Authorised Signatory – </td>
+                    </tr>
+                    <tr valign="top">
+                        <td>
+                            <table>
+                                <tr valign="top">
+                                    <td style="text-align:left;" height="80">WITNESSED BY:</td>
+                                </tr>
+                                <tr valign="top">
+                                    <td style="text-align:left;" height="40">Designation:</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;">DATE:</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="text-align:left;">
+                            Authorised Signatory – <br>
+                            (Parviom Technologies Pvt. Ltd)
+                        </td>
+                    </tr>
+                </table>
+                <footer>
+                    Parviom Technologies Pvt. Ltd. D-8, 3rd Floor, Mansarover Garden, <br>Delhi, New Delhi - 110015
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/moment.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

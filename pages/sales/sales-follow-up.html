@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Follow Up</title>
+    <link rel="shortcut icon" href="../../images/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="javascript:void(0)" class="sidebar-hamburger">
+                <img src="../../images/hamburger.png" alt="">
+            </a>
+            <a href="../index.html" class="">
+                <picture>
+                    <source media="(min-width:768px)" srcset="../../images/logo.png">
+                    <img src="../../images/mini-logo.png" alt="Logo" width="99">
+                </picture>
+                <span>Fusion</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="treeview notification">
+                    <a href="#"><img src="../../images/bell.png" alt=""></a>
+                </li>
+                <li class="treeview admin-menu">
+                    <a href="#">
+                        <span class="admin-icon"><img src="../../images/admin.png" alt=""></span>
+                        <span class="admin-name">Saurabh Mitra</span>
+                        <img src="../../images/arrow-down.png" alt="" class="dropdown-icon">
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="body-container">
+        <aside class="main-sidebar scrollbar-styling">
+            <section class="sidebar">
+                <ul class="sidebar-menu tree">
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="../pwa-maintenance/preventive-maintenance.html">Preventive Maintenance</a>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Tickets</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../pwa-maintenance/pm-tickets.html">PM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/rm-tickets.html">RM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>
+                        </ul>
+                    </li>             
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Sales</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../sales/sales-create-lead.html">Create Lead</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Lead Listing</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../sales/presales-lead-listing.html">Pre Sales Lead Listing</a>
+                                    </li>
+                                    <li>
+                                        <a href="../sales/postsales-lead-listing.html">Post Sales Lead Listing</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-ticket-list.html">Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-approvals-list.html">Approvals</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Installation</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../installation/site-listing.html">Site Listing</a>
+                            </li>
+                            <li>
+                                <a href="../installation/set-target-date.html">Set Target Date</a>
+                            </li>
+                            <li>
+                                <a href="../installation/site-stages.html">Site Stages</a>
+                            </li>
+                            <li>
+                                <a href="../installation/change-assignee.html">Change Assignee</a>
+                            </li>
+                            <li>
+                                <a href="../installation/meeting-history.html">Schedule Meeting</a>
+                            </li>
+                            <li>
+                                <a href="../installation/vendor-allocation.html">Vendor Allocation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Maintenance</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../maintenance/go-live-sites.html">Go Live Sites</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Preventive Maintenance</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../maintenance/reactive-maintenance.html">Reactive Maintenance</a>
+                            </li>
+                            <li>
+                                <a href="../maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>                    
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Approvals</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/approval-pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-rm-tickets.html">RM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approvals-employee-tickets.html">Employee Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="../site-location-mapping">Site Location Mapping</a>
+                    </li>
+                    <li>
+                        <a href="../file-complain/index.html">File Complain</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <div class="content-wrapper">
+            <div class="layout-header">
+                <h4><a href="../sales/presales-lead-listing.html"><img src="../../images/back-arrow.png" alt=""> Follow Up</a></h4>
+                <div class="btn-group">
+                    <a href="../sales/sales-follow-up-04.html" class="btn btn-transparent">View POCs</a>
+                    <a href="../sales/sales-follow-up-01.html" class="btn btn-primary d-none d-md-inline-block">Add Follow Up <img src="../../images/arrow-right.png" alt=""></a>
+                </div>
+            </div>
+            <div class="panel panel-table-wrapper scrollbar-styling">
+                <table class="panel-table">
+                    <thead>
+                        <tr>
+                            <th>Last Interaction Date</th>
+                            <th>Interaction Type</th>
+                            <th>Current Status</th>
+                            <th>Next Action Date</th>
+                            <th>Expected Closure</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="th">Last Interaction Date</span> 14/07/2020</td>
+                            <td><span class="th">Interaction Type</span>Meeting</td>
+                            <td><span class="th">Current Status</span>Meeting Fixed</td>
+                            <td><span class="th">Next Action Date</span>14/07/2020</td>
+                            <td><span class="th">Expected Closure</span>14/07/2020</td>
+                            <td>
+                                <a href="../sales/sales-follow-up-03.html" class="btn btn-transparent">View Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="th">Last Interaction Date</span> 14/07/2020</td>
+                            <td><span class="th">Interaction Type</span>Meeting</td>
+                            <td><span class="th">Current Status</span>Meeting Fixed</td>
+                            <td><span class="th">Next Action Date</span>14/07/2020</td>
+                            <td><span class="th">Expected Closure</span>14/07/2020</td>
+                            <td>
+                                <a href="../sales/sales-follow-up-03.html" class="btn btn-transparent">View Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="th">Last Interaction Date</span> 14/07/2020</td>
+                            <td><span class="th">Interaction Type</span>Meeting</td>
+                            <td><span class="th">Current Status</span>Meeting Fixed</td>
+                            <td><span class="th">Next Action Date</span>14/07/2020</td>
+                            <td><span class="th">Expected Closure</span>14/07/2020</td>
+                            <td>
+                                <a href="../sales/sales-follow-up-03.html" class="btn btn-transparent">View Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="th">Last Interaction Date</span> 14/07/2020</td>
+                            <td><span class="th">Interaction Type</span>Meeting</td>
+                            <td><span class="th">Current Status</span>Meeting Fixed</td>
+                            <td><span class="th">Next Action Date</span>14/07/2020</td>
+                            <td><span class="th">Expected Closure</span>14/07/2020</td>
+                            <td>
+                                <a href="../sales/sales-follow-up-03.html" class="btn btn-transparent">View Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="th">Last Interaction Date</span> 14/07/2020</td>
+                            <td><span class="th">Interaction Type</span>Meeting</td>
+                            <td><span class="th">Current Status</span>Meeting Fixed</td>
+                            <td><span class="th">Next Action Date</span>14/07/2020</td>
+                            <td><span class="th">Expected Closure</span>14/07/2020</td>
+                            <td>
+                                <a href="../sales/sales-follow-up-03.html" class="btn btn-transparent">View Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="th">Last Interaction Date</span> 14/07/2020</td>
+                            <td><span class="th">Interaction Type</span>Meeting</td>
+                            <td><span class="th">Current Status</span>Meeting Fixed</td>
+                            <td><span class="th">Next Action Date</span>14/07/2020</td>
+                            <td><span class="th">Expected Closure</span>14/07/2020</td>
+                            <td>
+                                <a href="../sales/sales-follow-up-03.html" class="btn btn-transparent">View Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="th">Last Interaction Date</span> 14/07/2020</td>
+                            <td><span class="th">Interaction Type</span>Meeting</td>
+                            <td><span class="th">Current Status</span>Meeting Fixed</td>
+                            <td><span class="th">Next Action Date</span>14/07/2020</td>
+                            <td><span class="th">Expected Closure</span>14/07/2020</td>
+                            <td>
+                                <a href="../sales/sales-follow-up-03.html" class="btn btn-transparent">View Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="th">Last Interaction Date</span> 14/07/2020</td>
+                            <td><span class="th">Interaction Type</span>Meeting</td>
+                            <td><span class="th">Current Status</span>Meeting Fixed</td>
+                            <td><span class="th">Next Action Date</span>14/07/2020</td>
+                            <td><span class="th">Expected Closure</span>14/07/2020</td>
+                            <td>
+                                <a href="../sales/sales-follow-up-03.html" class="btn btn-transparent">View Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="th">Last Interaction Date</span> 14/07/2020</td>
+                            <td><span class="th">Interaction Type</span>Meeting</td>
+                            <td><span class="th">Current Status</span>Meeting Fixed</td>
+                            <td><span class="th">Next Action Date</span>14/07/2020</td>
+                            <td><span class="th">Expected Closure</span>14/07/2020</td>
+                            <td>
+                                <a href="../sales/sales-follow-up-03.html" class="btn btn-transparent">View Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="th">Last Interaction Date</span> 14/07/2020</td>
+                            <td><span class="th">Interaction Type</span>Meeting</td>
+                            <td><span class="th">Current Status</span>Meeting Fixed</td>
+                            <td><span class="th">Next Action Date</span>14/07/2020</td>
+                            <td><span class="th">Expected Closure</span>14/07/2020</td>
+                            <td>
+                                <a href="../sales/sales-follow-up-03.html" class="btn btn-transparent">View Details</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="panel-pagination-col">
+                    <div class="load-more d-md-none"><a href="#" class="btn btn-load">Show 10 More</a></div>
+                    <div class="panel-table-lenth d-none d-md-flex">
+                        <select name="" id="" class="form-control custom-select" required="" >
+                            <option value="10" selected>10</option
+                            <option value="11-20">11-20</option>
+                            <option value="21-30">21-30</option>
+                            <option value="31-40">31-40</option>
+                            <option value="41-50">41-50</option>
+                            <option value="51-60">51-60</option>
+                            <option value="61-70">61-70</option>
+                            <option value="71-80">71-80</option>
+                        </select>
+                        <span class="record-status">Showing 10 of 80 records</span>
+                    </div>
+                    <div class="panel-table-pagination d-none d-md-block">
+                        <ul>
+                            <li><a href="#"><<</a></li>
+                            <li><a href="#"><</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li class="disabled"><a href="#">></a></li>
+                            <li class="disabled"><a href="#">>></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-group">
+                <a href="../sales/sales-follow-up-01.html" class="btn btn-primary d-md-none">Add Follow Up <img src="../../images/arrow-right.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

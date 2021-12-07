@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="shortcut icon" href="../../images/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/datepicker.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="javascript:void(0)" class="sidebar-hamburger">
+                <img src="../../images/hamburger.png" alt="">
+            </a>
+            <a href="../index.html" class="">
+                <picture>
+                    <source media="(min-width:768px)" srcset="../../images/logo.png">
+                    <img src="../../images/mini-logo.png" alt="Logo" width="99">
+                </picture>
+                <span>Fusion</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="treeview notification">
+                    <a href="#"><img src="../../images/bell.png" alt=""></a>
+                </li>
+                <li class="treeview admin-menu">
+                    <a href="#">
+                        <span class="admin-icon"><img src="../../images/admin.png" alt=""></span>
+                        <span class="admin-name">Saurabh Mitra</span>
+                        <img src="../../images/arrow-down.png" alt="" class="dropdown-icon">
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="body-container">
+        <aside class="main-sidebar scrollbar-styling">
+            <section class="sidebar">
+                <ul class="sidebar-menu tree">
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="../pwa-maintenance/preventive-maintenance.html">Preventive Maintenance</a>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Tickets</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../pwa-maintenance/pm-tickets.html">PM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/rm-tickets.html">RM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>
+                        </ul>
+                    </li>             
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Sales</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../sales/sales-create-lead.html">Create Lead</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Lead Listing</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../sales/presales-lead-listing.html">Pre Sales Lead Listing</a>
+                                    </li>
+                                    <li>
+                                        <a href="../sales/postsales-lead-listing.html">Post Sales Lead Listing</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-ticket-list.html">Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-approvals-list.html">Approvals</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Installation</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../installation/site-listing.html">Site Listing</a>
+                            </li>
+                            <li>
+                                <a href="../installation/set-target-date.html">Set Target Date</a>
+                            </li>
+                            <li>
+                                <a href="../installation/site-stages.html">Site Stages</a>
+                            </li>
+                            <li>
+                                <a href="../installation/change-assignee.html">Change Assignee</a>
+                            </li>
+                            <li>
+                                <a href="../installation/meeting-history.html">Schedule Meeting</a>
+                            </li>
+                            <li>
+                                <a href="../installation/vendor-allocation.html">Vendor Allocation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Maintenance</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../maintenance/go-live-sites.html">Go Live Sites</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Preventive Maintenance</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../maintenance/reactive-maintenance.html">Reactive Maintenance</a>
+                            </li>
+                            <li>
+                                <a href="../maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>                    
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Approvals</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/approval-pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-rm-tickets.html">RM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approvals-employee-tickets.html">Employee Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="../site-location-mapping">Site Location Mapping</a>
+                    </li>
+                    <li>
+                        <a href="../file-complain/index.html">File Complain</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <div class="content-wrapper">
+            <div class="layout-header">
+                <h4>Attendance</h4>
+            </div>
+            <div class="panel scrollbar-styling">
+                <div class="panel-card">
+                    <div class="panel-heading">Today Attendance</div>
+                    <div class="panel-body">
+                        <form action="">
+                            <div class="full-width">
+                                <div class="form-group">
+                                    <select name="" id="" class="form-control custom-select" required>
+                                        <option value="">Office</option>
+                                        <option value="">Site</option>
+                                    </select>
+                                    <label class="placeholder">Location</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value="" hidden>Please Select</option>
+                                    <option value="tidyverse">tidyverse</option>
+                                    <option value="psych">psych</option>
+                                    <option value="stargazer">stargazer</option>
+                                    <option value="interplot">interplot</option>
+                                    <option value="car">car</option>
+                                    <option value="reshape2">reshape2</option>
+                                    <option value="broom">broom</option>
+                                </select>
+                                <label class="placeholder">Lorem Ipsum Listing</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value="">In</option>
+                                    <option value="">Out</option>
+                                </select>
+                                <label class="placeholder">Type</label>
+                                <label class="error">Error Message show with error-field class on input</label>
+                            </div>
+                            <div class="form-group form-btn">
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Today Attendance List</div>
+                    <div class="panel-body">
+                        <table class="panel-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Site</th>
+                                    <th>Detail</th>
+                                    <th>Type</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>XYZ</td>
+                                    <td>Office</td>
+                                    <td></td>
+                                    <td>In</td>
+                                    <td>9:30</td>
+                                </tr>
+                                <tr>
+                                    <td>XYZ</td>
+                                    <td>Site</td>
+                                    <td></td>
+                                    <td>Out</td>
+                                    <td>18:30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/moment.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.js"></script>
+    <script src="../../js/main.js"></script>
+    <script>
+        $('.date').datepicker({ 
+            autoclose: true, 
+            todayHighlight: true
+        });
+    </script>
+</body>
+</html>

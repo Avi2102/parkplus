@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Modal</title>
+    <link rel="shortcut icon" href="images/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="#">
+                <img src="images/logo.png" alt="">
+                <span>Fusion</span>
+            </a>
+        </div>
+        <div class="login-container">
+            <div class="login-fieldset">
+                <h4>Modal Demo</h4>
+                <div class="d-flex form-group">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#errorModal">Error modal</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#successModal">Success modal</button>
+                </div>
+                <div class="d-flex form-group">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">Form modal</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#OTPModal">OTP modal</button>
+                </div>
+                <div class="d-flex">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">Upload Button</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadListModal">Upload List</button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; Parviom Technologies Private Limited 2020</p>
+        </div>
+    </div>    
+    <!-- Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="errorModalLabel">Error</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="images/cross.png" alt="">
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <img src="images/alert.png" alt="">
+                        <h5>Looks like something went wrong,<br>please try again.</h5>
+                        <button class="btn btn-primary">Continue <img src="images/arrow-right.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Confirmation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="images/cross.png" alt="">
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <div class="success">
+                            <img src="images/tick.png" alt="">
+                        </div>
+                        <h5>Material Successfully approved.</h5>
+                        <button class="btn btn-primary">Continue <img src="images/arrow-right.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="formModalLabel">Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="images/cross.png" alt="">
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <form action="">
+                            <div class="form-group">
+                                <input type="text" placeholder="" class="form-control" required>
+                                <label class="placeholder">Name</label>
+                                <label class="error">Invalid Name Format</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="" class="form-control error-field" required>
+                                <label class="placeholder">Email ID</label>
+                                <label class="error">Invalid Email ID</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="" class="form-control" required>
+                                <label class="placeholder">Phone Number</label>
+                                <label class="error">Invalid Phone Number</label>
+                            </div>
+                            <div class="form-group">
+                                <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+                                    <input class="form-control" type="text" placeholder="" required/>
+                                    <span class="input-group-addon"><i class="far fa-calendar-alt"></i></span>
+                                    <label class="placeholder">Select Date of Birth</label>
+                                    <label class="error">Invalid Date of Birth</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value=""></option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                </select>
+                                <label class="placeholder">Location</label>
+                                <label class="error">Invalid Location</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required multiple>
+                                    <option value=""></option>
+                                    <option value="Basketball">Basketball</option>
+                                    <option value="Football">Football</option>
+                                    <option value="Volleyball">Volleyball</option>
+                                    <option value="Marathon running">Marathon running</option>
+                                    <option value="Skiing">Skiing</option>
+                                    <option value="Tennis">Tennis</option>
+                                    <option value="Cycling">Cycling</option>
+                                    <option value="Swimming">Swimming</option>
+                                    <option value="Baseball">Baseball</option>
+                                    <option value="Mountain climbing">Mountain climbing</option>
+                                </select>
+                                <label class="placeholder">Hobby</label>
+                                <label class="error">Invalid</label>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary">Request OTP <img src="images/arrow-right.png" alt=""></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="OTPModal" tabindex="-1" role="dialog" aria-labelledby="OTPModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="OTPModalLabel">OTP</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="images/cross.png" alt="">
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <form action="">
+                            <div class="form-group">
+                                <div class="otp-group">
+                                    <div class="otp-field">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="otp-field">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="otp-field">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="otp-field">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <label for="" class="msg">OTP not received? <a href="#">Resend</a></label>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="uploadModalLabel">Upload File</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="images/cross.png" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <img src="images/cloud-upload.png" alt="">
+                        <form action="">
+                            <div class="custom-upload">
+                                <input type="file" name="" id="" class="custom-input-file">
+                                <button class="btn btn-transparent">Browse and Upload <img src="images/arrow-right-blue.png" alt=""></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="uploadListModal" tabindex="-1" role="dialog" aria-labelledby="uploadListModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="uploadListLabel">Upload File</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="images/cross.png" alt="">
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <img src="images/cloud-upload.png" alt="">
+                        <ul class="upload-list">
+                            <li>
+                                <span class="file-name"><img src="images/file-icon.png" alt="">Invoice-update-june.xls</span>
+                                <img src="images/cross.png" width="14" alt="" class="remove-icon">
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary">Continue <img src="images/arrow-right.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('.date').datepicker({ 
+            autoclose: false, 
+            todayHighlight: true
+        });
+    </script>
+</body>
+</html>

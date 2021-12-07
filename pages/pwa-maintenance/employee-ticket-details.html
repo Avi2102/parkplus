@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Maintenance - Employee Ticket Details</title>
+    <link rel="shortcut icon" href="../../images/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="javascript:void(0)" class="sidebar-hamburger">
+                <img src="../../images/hamburger.png" alt="">
+            </a>
+            <a href="../index.html" class="">
+                <picture>
+                    <source media="(min-width:768px)" srcset="../../images/logo.png">
+                    <img src="../../images/mini-logo.png" alt="Logo" width="99">
+                </picture>
+                <span>Fusion</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="treeview notification">
+                    <a href="#"><img src="../../images/bell.png" alt=""></a>
+                </li>
+                <li class="treeview admin-menu">
+                    <a href="#">
+                        <span class="admin-icon"><img src="../../images/admin.png" alt=""></span>
+                        <span class="admin-name">Saurabh Mitra</span>
+                        <img src="../../images/arrow-down.png" alt="" class="dropdown-icon">
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="body-container">
+        <aside class="main-sidebar scrollbar-styling">
+            <section class="sidebar">
+                <ul class="sidebar-menu tree">
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="../pwa-maintenance/preventive-maintenance.html">Preventive Maintenance</a>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Tickets</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../pwa-maintenance/pm-tickets.html">PM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/rm-tickets.html">RM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>
+                        </ul>
+                    </li>             
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Sales</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../sales/sales-create-lead.html">Create Lead</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Lead Listing</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../sales/presales-lead-listing.html">Pre Sales Lead Listing</a>
+                                    </li>
+                                    <li>
+                                        <a href="../sales/postsales-lead-listing.html">Post Sales Lead Listing</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-ticket-list.html">Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-approvals-list.html">Approvals</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Installation</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../installation/site-listing.html">Site Listing</a>
+                            </li>
+                            <li>
+                                <a href="../installation/set-target-date.html">Set Target Date</a>
+                            </li>
+                            <li>
+                                <a href="../installation/site-stages.html">Site Stages</a>
+                            </li>
+                            <li>
+                                <a href="../installation/change-assignee.html">Change Assignee</a>
+                            </li>
+                            <li>
+                                <a href="../installation/meeting-history.html">Schedule Meeting</a>
+                            </li>
+                            <li>
+                                <a href="../installation/vendor-allocation.html">Vendor Allocation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Maintenance</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../maintenance/go-live-sites.html">Go Live Sites</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Preventive Maintenance</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../maintenance/reactive-maintenance.html">Reactive Maintenance</a>
+                            </li>
+                            <li>
+                                <a href="../maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>                    
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Approvals</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/approval-pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-rm-tickets.html">RM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approvals-employee-tickets.html">Employee Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="../site-location-mapping">Site Location Mapping</a>
+                    </li>
+                    <li>
+                        <a href="../file-complain/index.html">File Complain</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <div class="content-wrapper">
+            <div class="layout-header">
+                <h4><a href="employee-tickets.html"><img src="../../images/back-arrow.png" alt=""> Employee Ticket Details</a></h4>
+                <div class="btn-group">
+                    <a href="javascript:void(0)" class="btn btn-transparent d-none d-md-inline-block" data-toggle="modal" data-target="#statusModal">Change Status of Ticket</a>
+                </div>
+            </div>
+            <div class="panel scrollbar-styling">
+                <div class="panel-card">
+                    <div class="panel-heading">Ticket Details</div>
+                    <div class="panel-body">
+                        <div class="details-listing">
+                            <div class="details-list">
+                                <strong class="data-title">Ticket ID</strong>
+                                <span class="data-details">9812893888</span>
+                            </div>
+                            <div class="details-list">
+                                <strong class="data-title">Ticket Type</strong>
+                                <span class="data-details">Preventive Maintenance Ticket</span>
+                            </div>
+                            <div class="details-list">
+                                <strong class="data-title">Created On</strong>
+                                <span class="data-details">08/08/2020</span>
+                            </div>
+                            <div class="details-list">
+                                <strong class="data-title">Raised By</strong>
+                                <span class="data-details">Camila</span>
+                            </div>
+                            <div class="details-list">
+                                <strong class="data-title">Site ID</strong>
+                                <span class="data-details">812389</span>
+                            </div>
+                            <div class="details-list">
+                                <strong class="data-title">Site Type</strong>
+                                <span class="data-details">Corporate</span>
+                            </div>
+                            <div class="details-list">
+                                <strong class="data-title">PM Schedule Month</strong>
+                                <span class="data-details">August</span>
+                            </div>
+                            <div class="details-list">
+                                <strong class="data-title">Gate No.</strong>
+                                <span class="data-details">01</span>
+                            </div>
+                            <div class="details-list">
+                                <strong class="data-title">Maintenance Date</strong>
+                                <span class="data-details">9/08/2020</span>
+                            </div>
+                            <div class="details-list">
+                                <strong class="data-title">Status</strong>
+                                <span class="data-details">
+                                    <span class="status-td warm">Open</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Boom Barrier</div>
+                    <div class="panel-body">
+                        <div class="details-listing">
+                            <div class="details-list full-width">
+                                <span class="data-details">Iron cage below the magnetic loop ?</span>
+                            </div>
+                            <div class="details-list full-width">
+                                <strong class="data-title">Remarks</strong>
+                                <span class="data-details">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-heading">Replies</div>
+                    <div class="panel-body">
+                        <div class="details-listing reply-box">
+                            <div class="details-byline">
+                                <div class="details-list">
+                                    <strong class="data-title">Reply Date </strong>
+                                    <span class="data-details">12/04/2020</span>
+                                </div>
+                                <div class="details-list">
+                                    <strong class="data-title d-none d-md-block">Replied by</strong>
+                                    <span class="data-details"><span class="d-md-none">By </span>Jane Rose</span>
+                                </div>
+                            </div>
+                            <div class="details-list full-width">
+                                <strong class="data-title">Response</strong>
+                                <span class="data-details">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                            </div>
+                            <div class="details-list full-width">
+                                <div class="upload-module">
+                                    <span class="file-name"><img src="../../images/file-icon.png" alt="">Barrier.img</span>
+                                    <div>
+                                        <img src="../../images/view-icon.png" alt="" class="view-icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form action="">
+                            <div class="form-group full-width">
+                                <textarea type="text" class="form-control" rows="1" required style="min-height: 0; resize: none; max-width: 800px;"></textarea>
+                                <label for="" class="placeholder">Enter Reply Description</label>
+                            </div>
+                            <div class="form-group form-btn">
+                                <div class="custom-upload">
+                                    <input type="file" name="" id="" class="custom-input-file">
+                                    <button class="btn btn-transparent">Upload Attachment</button>
+                                </div>
+                                <button type="button" class="btn btn-primary">Reply <img src="../../images/arrow-right.png" alt=""></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-group">
+                <a href="javascript:void(0)" class="btn btn-transparent d-md-none" data-toggle="modal" data-target="#statusModal">Change Status of Ticket</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="statusModal" tabindex="-1" role="dialog" aria-labelledby="statusModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="statusModalLabel">Change Status</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="../../images/cross.png" alt="">
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <h5>Please confirm the status of this ticket.</h5>
+                        <form action="">
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value=""></option>
+                                    <option value="Resolved">Resolved</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Closed" selected>Closed</option>
+                                </select>
+                                <label class="placeholder">Select Status</label>
+                                <label class="error">Invalid</label>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" data-dismiss="modal" aria-label="Close">Confirm & Submit <img src="../../images/arrow-right.png" alt=""></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

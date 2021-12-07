@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance - Approval - PM Sites - View Report</title>
+    <link rel="shortcut icon" href="../../images/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/datepicker.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>    
+    <header class="main-header">
+        <div class="logo">
+            <a href="javascript:void(0)" class="sidebar-hamburger">
+                <img src="../../images/hamburger.png" alt="">
+            </a>
+            <a href="../index.html" class="">
+                <picture>
+                    <source media="(min-width:768px)" srcset="../../images/logo.png">
+                    <img src="../../images/mini-logo.png" alt="Logo" width="99">
+                </picture>
+                <span>Fusion</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="treeview notification">
+                    <a href="#"><img src="../../images/bell.png" alt=""></a>
+                </li>
+                <li class="treeview admin-menu">
+                    <a href="#">
+                        <span class="admin-icon"><img src="../../images/admin.png" alt=""></span>
+                        <span class="admin-name">Saurabh Mitra</span>
+                        <img src="../../images/arrow-down.png" alt="" class="dropdown-icon">
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="body-container">
+        <aside class="main-sidebar scrollbar-styling">
+            <section class="sidebar">
+                <ul class="sidebar-menu tree">
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="../pwa-maintenance/preventive-maintenance.html">Preventive Maintenance</a>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Tickets</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../pwa-maintenance/pm-tickets.html">PM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/rm-tickets.html">RM Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../pwa-maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>
+                        </ul>
+                    </li>             
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Sales</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../sales/sales-create-lead.html">Create Lead</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Lead Listing</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../sales/presales-lead-listing.html">Pre Sales Lead Listing</a>
+                                    </li>
+                                    <li>
+                                        <a href="../sales/postsales-lead-listing.html">Post Sales Lead Listing</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-ticket-list.html">Tickets</a>
+                            </li>
+                            <li>
+                                <a href="../sales/sales-approvals-list.html">Approvals</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Installation</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../installation/site-listing.html">Site Listing</a>
+                            </li>
+                            <li>
+                                <a href="../installation/set-target-date.html">Set Target Date</a>
+                            </li>
+                            <li>
+                                <a href="../installation/site-stages.html">Site Stages</a>
+                            </li>
+                            <li>
+                                <a href="../installation/change-assignee.html">Change Assignee</a>
+                            </li>
+                            <li>
+                                <a href="../installation/meeting-history.html">Schedule Meeting</a>
+                            </li>
+                            <li>
+                                <a href="../installation/vendor-allocation.html">Vendor Allocation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="javascript:void(0)">Maintenance</a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../maintenance/go-live-sites.html">Go Live Sites</a>
+                            </li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Preventive Maintenance</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../maintenance/reactive-maintenance.html">Reactive Maintenance</a>
+                            </li>
+                            <li>
+                                <a href="../maintenance/employee-tickets.html">Employee Tickets</a>
+                            </li>                    
+                            <li class="treeview">
+                                <a href="javascript:void(0)">Approvals</a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="../maintenance/approval-pm-sites.html">PM Sites</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-pm-tickets.html">PM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approval-rm-tickets.html">RM Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="../maintenance/approvals-employee-tickets.html">Employee Tickets</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="../site-location-mapping">Site Location Mapping</a>
+                    </li>
+                    <li>
+                        <a href="../file-complain/index.html">File Complain</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <div class="content-wrapper">
+            <div class="layout-header">
+                <h4><a href="approval-pm-sites.html"><img src="../../images/back-arrow.png" alt=""> View Checklist Report</a></h4>
+            </div>
+            <div class="panel scrollbar-styling">
+                <ul class="nav nav-tabs">
+                    <li><a class="active" data-toggle="tab" href="#gate_1" data-attr="gate_1">Gate 1</a></li>
+                    <li><a data-toggle="tab" href="#gate_2" data-attr="gate_2">Gate 2</a></li>
+                    <li><a data-toggle="tab" href="#gate_3" data-attr="gate_3">Gate 3</a></li>
+                    <li><a data-toggle="tab" href="#gate_4" data-attr="gate_4">Gate 4</a></li>
+                    <li><a data-toggle="tab" href="#gate_5" data-attr="gate_5">Gate 5</a></li>
+                </ul>
+                <div class="tab-content">                    
+                    <div id="gate_1" class="tab-pane fade show active">
+                        <div class="panel-card">
+                            <div class="panel-heading">Gate 1 Checklist</div>
+                            <div class="panel-body">
+                                <div class="panel-card-listing">
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-boom-barrier.html"><u>Boom Barrier</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-control-panel.html"><u>Control panel</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-poles.html"><u>Poles</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-rfid.html"><u>RFID Reader & Tag</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-system-tests.html"><u>System tests</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-mandate-checks.html"><u>Mandate Checks</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gate_2" class="tab-pane fade">
+                        <div class="panel-card">
+                            <div class="panel-heading">Gate 2 Checklist</div>
+                            <div class="panel-body">
+                                <div class="panel-card-listing">
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-boom-barrier.html"><u>Boom Barrier</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-control-panel.html"><u>Control panel</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-poles.html"><u>Poles</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-rfid.html"><u>RFID Reader & Tag</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-system-tests.html"><u>System tests</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-mandate-checks.html"><u>Mandate Checks</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gate_3" class="tab-pane fade">
+                        <div class="panel-card">
+                            <div class="panel-heading">Gate 3 Checklist</div>
+                            <div class="panel-body">
+                                <div class="panel-card-listing">
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-boom-barrier.html"><u>Boom Barrier</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-control-panel.html"><u>Control panel</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-poles.html"><u>Poles</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-rfid.html"><u>RFID Reader & Tag</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-system-tests.html"><u>System tests</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-mandate-checks.html"><u>Mandate Checks</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gate_4" class="tab-pane fade">
+                        <div class="panel-card">
+                            <div class="panel-heading">Gate 4 Checklist</div>
+                            <div class="panel-body">
+                                <div class="panel-card-listing">
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-boom-barrier.html"><u>Boom Barrier</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-control-panel.html"><u>Control panel</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-poles.html"><u>Poles</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-rfid.html"><u>RFID Reader & Tag</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-system-tests.html"><u>System tests</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-mandate-checks.html"><u>Mandate Checks</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gate_5" class="tab-pane fade">
+                        <div class="panel-card">
+                            <div class="panel-heading">Gate 5 Checklist</div>
+                            <div class="panel-body">
+                                <div class="panel-card-listing">
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-boom-barrier.html"><u>Boom Barrier</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-control-panel.html"><u>Control panel</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-poles.html"><u>Poles</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-rfid.html"><u>RFID Reader & Tag</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-system-tests.html"><u>System tests</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-card">
+                                        <div class="panel-heading">
+                                            <a href="approval-pm-sites-checklist-mandate-checks.html"><u>Mandate Checks</u></a>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="details-listing">
+                                                <div class="details-list">
+                                                    <strong class="data-title">Product Type</strong>
+                                                    <span class="data-details">Hydraulic</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class="modal fade" id="addCategory" tabindex="-1" role="dialog" aria-labelledby="addCategoryLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addCategoryLabel">Add Category</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="../../images/cross.png" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <form action="">
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value=""></option>
+                                    <option value="lorem">Lorem</option>
+                                    <option value="ipsum">Ipsum</option>
+                                    <option value="lorem">Lorem</option>
+                                </select>
+                                <label class="placeholder">Type</label>
+                                <label class="error">Select 1 Type</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value=""></option>
+                                    <option value="lorem">Lorem</option>
+                                    <option value="ipsum">Ipsum</option>
+                                    <option value="lorem">Lorem</option>
+                                </select>
+                                <label class="placeholder">Category</label>
+                                <label class="error">Select 1 Category</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select" required>
+                                    <option value=""></option>
+                                    <option value="lorem">Lorem</option>
+                                    <option value="ipsum">Ipsum</option>
+                                    <option value="lorem">Lorem</option>
+                                </select>
+                                <label class="placeholder">Sub-Category</label>
+                                <label class="error">Select 1 Sub-Category</label>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" data-dismiss="modal">Add Category <img src="../../images/arrow-right.png" alt=""></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/moment.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.js"></script>
+    <script src="../../js/main.js"></script>
+    <script>
+        $('.date').datepicker({ 
+            autoclose: false, 
+            todayHighlight: true
+        });
+    </script>
+</body>
+</html>
